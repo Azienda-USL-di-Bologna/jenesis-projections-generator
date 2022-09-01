@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>jenesisprojections.generator</groupId>
+    <artifactId>jenesis-projections-generator</artifactId>
+    <version>1.2-SNAPSHOT</version>
+
+    <packaging>maven-plugin</packaging>
+
+    <dependencies>
+        <!-- The dependency to the maven API -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>3.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-project</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <!-- The dependency to the Jenesis4Java -->
+        <dependency>
+            <groupId>net.sourceforge.jenesis4java</groupId>
+            <artifactId>jenesis4java</artifactId>
+            <version>2.19</version>
+        </dependency>
+        <!-- We will use Jalopy to format the Generated source code -->
+        <dependency>
+            <groupId>jalopy</groupId>
+            <artifactId>jalopy</artifactId>
+            <version>1.5rc3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1-jre</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.2.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.12.1</version>
+        </dependency>
+        <!--Framework BE-->
+        <dependency>
+            <groupId>it.nextsw</groupId>
+            <artifactId>next-spring-data-rest-framework</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <!-- annotazioni hybernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-annotations</artifactId>
+            <version>3.5.6-Final</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>3.6.0</version>
+            </plugin>
+            <!-- other plugins -->
+        </plugins>
+    </build>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+</project>
